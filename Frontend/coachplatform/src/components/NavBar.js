@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import { makeStyles } from '@material-ui/core/styles'
+import { Link, Route, Switch } from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
     bar: {
@@ -49,24 +50,33 @@ const NavBar = () => {
                         Coach Platform
                     </Typography>
 
+                    <Link to="/">
                     <IconButton color="inherit" aria-label="home" className={classes.homeButton}>
                         <Typography variant = "h5" color="inherit">Home</Typography>
                     </IconButton>
+                    </Link>
 
+                    <Link to="/about">
                     <IconButton color="inherit" aria-label="about" className={classes.aboutButton}>
                         <Typography variant = "h5" color="inherit">About</Typography>
                     </IconButton>
+                    </Link>
 
+                    <Link to="/login">
                     <IconButton start="end" color="inherit" aria-label="login" className={classes.loginButton}>
                         <Typography variant = "h5" color="inherit">Login</Typography>
                     </IconButton>
+                    </Link>
 
+                    <Link to="/register">
                     <IconButton color="inherit" aria-label="register" className={classes.registerButton}>
                         <Typography variant = "h5" color="inherit">Register</Typography>
                     </IconButton>
+                    </Link>
 
                 </Toolbar>
             </AppBar>
+
         </div>
     )
 }

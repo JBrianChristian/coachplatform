@@ -1,14 +1,25 @@
 import './App.css';
 import React, { Component } from 'react'
-import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { NavBar, Footer, Home, About, Login, Register } from "./components"
 
 class App extends Component {
   render(){
     return(
-      <div>
-        <NavBar />
+      <div className="App">
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route path="/" exact component={() => <Home />} />
+            <Route path="/about" exact component={() => <About />} />
+            <Route path ="/login" exact component={() => <Login />} />
+            <Route path="/register" exact component={() => <Register />} />
+          </Switch>
+          <Footer />
+        </Router>
       </div>
     )
+
   }
 }
 
