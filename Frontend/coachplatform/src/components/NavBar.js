@@ -44,6 +44,12 @@ const NavBar = (props) => {
                     </IconButton>
                     </Link>
 
+                    <Link to="/MyPlans">
+                    <IconButton color="inherit" aria-label="myPlans" className={classes.myPlansButton}>
+                        <Typography variant = "h5" color="inherit">My Plans</Typography>
+                    </IconButton>
+                    </Link>
+
                 </Toolbar>
             </AppBar>
 
