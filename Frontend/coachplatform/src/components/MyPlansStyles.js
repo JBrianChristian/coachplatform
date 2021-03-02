@@ -18,14 +18,14 @@ const useStyles = makeStyles((theme) => ({
       transform: 'translateZ(0)',
     },
     title: {
-      color: theme.palette.primary.light,
+      color: 'white',
     },
     titleBar: {
       background:
         'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
     },
-    img: {
-        width: 150,
+    image: {
+        maxHeight: '100%',
     }
   }));
 
